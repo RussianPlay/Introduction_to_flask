@@ -1,0 +1,15 @@
+h3 {
+    color: rgba(0,0,0,0.5);
+}
+
+tank {
+    display:inline-block;
+}
+
+tank img {
+    display:block;
+}
+
+main {
+    margin-left: 20px;
+}

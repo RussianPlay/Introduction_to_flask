@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="card-group">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Цвет стиля</h5>
+            </div>
+            {% if age >= 21 and sex == 'female' %}
+            <img src="{{ url_for('static', filename='img/wall_1_1.png') }}">
+            {% elif age < 21 and sex == 'female' %}
+            <img src="{{ url_for('static', filename='img/wall_1_2.png') }}">
+            {% elif age >= 21 and sex == 'male' %}
+            <img src="{{ url_for('static', filename='img/wall_2_1.png') }}">
+            {% elif age < 21 and sex == 'male' %}
+            <img src="{{ url_for('static', filename='img/wall_2_2.png') }}">
+            {% endif %}
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Эмблема</h5>
+            </div>
+            {% if sex == 'female' %}
+            <img src="{{ url_for('static', filename='img/marsianin_1.png') }}">
+            {% elif sex == 'male' %}
+            <img src="{{ url_for('static', filename='img/marsianin_2.png') }}">
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

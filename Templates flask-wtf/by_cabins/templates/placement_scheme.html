@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for astronaut in actronauts %}
+        <h2>{{ astronaut }} - Каюта № {{ loop.index }}  {% if loop.first %}  - Капитан корабля {% endif %}</h2>
+    {% endfor %}
+
+
+{% endblock %}
