@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content%}
+    <h2>Works log</h2>
+    {% for action in actions %}
+        <h3>Action # {{ loop.index }}</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title of activity</th>
+                    <th>Team leader</th>
+                    <th>Duration</th>
+                    <th>List of collaborators</th>
+                    <th>Is finished</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="info">
+                    <td class="table-info">{{ action.title_activity }}</td>
+                    <td class="table-info">{{ action.team_leader }}</td>
+                    <td class="table-info">{{ action.duration }}</td>
+                    <td class="table-info">{{ action.lst_collaborators }}</td>
+                    <td class="table-danger">{{ action.is_finished }}</td>
+                </tr>
+            </tbody>
+        </table>
+    {% endfor %}
+{% endblock %}
